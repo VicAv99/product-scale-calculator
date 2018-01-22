@@ -1,0 +1,47 @@
+  <!-- Form One -->
+<div div fxLayout="row" fxLayoutAlign="space-evenly center">
+  <mat-form-field>
+    <mat-select placeholder="Product Cost"
+                [(ngModel)]="productPrice"
+                name="productPrice">
+
+      <mat-option *ngFor="let productPrice of calculatorData.productPrices"
+                    [value]="productPrice.value">{{productPrice.value | currency}}
+      </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+  <p>product <strong>X</strong></p>
+
+  <mat-form-field>
+    <mat-select placeholder="Sales per Month"
+                [(ngModel)]="salesPerMonth"
+                name="salesPerMonth">
+
+      <mat-option *ngFor="let salesPerMonth of calculatorData.numberOfSales"
+                    [value]="salesPerMonth.value">{{salesPerMonth.value}}
+      </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+  <p>sales per month <strong>X</strong></p>
+
+  <mat-form-field>
+    <mat-select placeholder="Amount of Years"
+                [(ngModel)]="numYear"
+                name="numYear">
+
+      <mat-option *ngFor="let numYear of calculatorData.numYears"
+                    [value]="numYear.value">{{numYear.value}}
+      </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+  <p>years <strong>=</strong></p>
+
+  <p *ngIf="calculateTotal(); else display"> {{calculateTotal() | currency}}</p>
+  <ng-template #display> $0</ng-template>
+</div>

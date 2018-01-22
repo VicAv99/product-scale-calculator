@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* @import '~@angular/material/prebuilt-themes/purple-green.css'; */
+
+body {
+  background-color: #7AD9D0;
+}
+
+hr {
+  color: #9ac990;
+  width: 200px;
+}
