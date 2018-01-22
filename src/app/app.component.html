@@ -13,11 +13,12 @@
           <app-calculator></app-calculator>
           <p fxLayoutAlign="center">Advanced students only. Add even more products. Behold, the power of scale!</p>
           <app-calculator></app-calculator>
-          <app-calculator></app-calculator>
+          <app-calculator
+            (onAddAllTotals)="addAllTotals($event)"></app-calculator>
 
           <hr>
 
-          <p fxLayoutAlign="center"><strong>Grand Total: </strong></p>
+          <p fxLayoutAlign="center"><strong>Grand Total: {{addAllTotals()}}</strong></p>
       </mat-card-content>
     </mat-card>
   </div>

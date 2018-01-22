@@ -17,7 +17,8 @@
   <mat-form-field>
     <mat-select placeholder="Sales per Month"
                 [(ngModel)]="salesPerMonth"
-                name="salesPerMonth">
+                name="salesPerMonth"
+                (click)="calculateTotal($event)">
 
       <mat-option *ngFor="let salesPerMonth of calculatorData.numberOfSales"
                     [value]="salesPerMonth.value">{{salesPerMonth.value}}
@@ -31,7 +32,8 @@
   <mat-form-field>
     <mat-select placeholder="Amount of Years"
                 [(ngModel)]="numYear"
-                name="numYear">
+                name="numYear"
+                (click)="calculateTotal($event)">
 
       <mat-option *ngFor="let numYear of calculatorData.numYears"
                     [value]="numYear.value">{{numYear.value}}
@@ -42,6 +44,6 @@
 
   <p>years <strong>=</strong></p>
 
-  <p *ngIf="calculateTotal(); else display"> {{calculateTotal() | currency}}</p>
-  <ng-template #display> $0</ng-template>
+  <p *ngIf="calculateTotal(); else display"><strong> {{calculateTotal() | currency}}</strong></p>
+  <ng-template #display> <strong>$0</strong> </ng-template>
 </div>

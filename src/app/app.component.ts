@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { CustomcalculatorComponent } from './customcalculator/customcalculator.component';
-import { Input } from '@angular/core/src/metadata/directives';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,7 @@ export class AppComponent {
   title = 'Zero to Launch';
 
   addAllTotals(){
-    return
+
   }
 
 }

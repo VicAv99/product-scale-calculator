@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CalculatorComponent } from './calculator/calculator.component';
-import { CustomcalculatorComponent } from './customcalculator/customcalculator.component';
 
 import { CalculatorDataService } from './shared/calculatordata.service';
 
@@ -15,8 +14,7 @@ import { CalculatorDataService } from './shared/calculatordata.service';
 @NgModule({
   declarations: [
     AppComponent,
-    CalculatorComponent,
-    CustomcalculatorComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
