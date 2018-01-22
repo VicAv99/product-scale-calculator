@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ProductPrice } from './product-price.model'
 
 @Injectable()
 export class CalculatorDataService {
-  constructor() {}
 
     productPrices = [
       {"value": 50},
